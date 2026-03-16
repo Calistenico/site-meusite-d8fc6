@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="pt-BR"><head>
+    <meta name="vyntrix-project" content="meusite-d8fc6">
+    <meta name="vyntrix-version" content="v16">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#05010d">
+
+  <title>PpPlayerTV — Assine agora Unitv Oficial e Uniplay / Melhotes Iptv 2026 / Mensal R$25. Acesso imediato</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&amp;family=Outfit:wght@700;900&amp;display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #05010d;
+      --bg-darker: #020005;
+      --accent: #22d3ee;
+      --purple: #7c3aed;
+      --purple-glow: rgba(124, 58, 237, 0.3);
+      --glass: rgba(255, 255, 255, 0.02);
+      --glass-border: rgba(255, 255, 255, 0.08);
+      --text: #f8fafc;
+      --text-dim: #94a3b8;
+    }
+
+    * { box-sizing: border-box; outline: none; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    .bg-web {
+      position: fixed; inset: 0; z-index: -1;
+      background: 
+        radial-gradient(circle at 20% 30%, #1e1b4b 0%, transparent 40%),
+        radial-gradient(circle at 80% 70%, #2e1065 0%, transparent 40%);
+      background-color: var(--bg-darker);
+    }
+
+    .container { width: 92%; max-width: 1200px; margin: 0 auto; }
+
+    /* --- HEADER --- */
+    .header {
+      position: sticky; top: 0; z-index: 1000;
+      backdrop-filter: blur(25px);
+      background: rgba(5, 1, 13, 0.8);
+      border-bottom: 1px solid var(--glass-border);
+      padding: 10px 0;
+    }
+    .nav { display: flex; justify-content: space-between; align-items: center; }
+    .logo-container { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+    .logo-img { height: 45px; width: auto; border-radius: 8px; }
+    .logo-text { font-family: 'Outfit', sans-serif; font-size: 24px; font-weight: 900; color: #fff; letter-spacing: -1px; }
+    .logo-text span { color: var(--purple); }
+
+    /* --- HERO --- */
+    .hero { padding: 60px 0 40px; text-align: center; position: relative; }
+    .hero h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(2.2rem, 8vw, 5.5rem);
+      line-height: 0.9; margin-bottom: 20px;
+      background: linear-gradient(to bottom, #fff 50%, var(--purple));
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+    }
+    .hero p { font-size: 1.1rem; color: var(--text-dim); max-width: 700px; margin: 0 auto 35px; }
+
+    /* --- INFO CARDS --- */
+    .premium-info { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 50px; }
+    .info-card { background: var(--glass); padding: 20px; border-radius: 20px; border: 1px solid var(--glass-border); text-align: center; }
+    .info-card h4 { color: var(--accent); margin-bottom: 5px; font-size: 1.2rem; }
+    .info-card p { font-size: 0.85rem; color: var(--text-dim); }
+
+    /* --- PLANS AREA --- */
+    .plans-area { padding: 40px 0; }
+    .plans-grid { display: none; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+    .plans-grid.active { display: grid; animation: fadeIn 0.5s ease; }
+    .plan-card {
+      background: rgba(255,255,255,0.02); border: 1px solid var(--glass-border);
+      border-radius: 25px; padding: 30px; transition: 0.3s; position: relative;
+      text-align: center; display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .plan-card:hover { border-color: var(--purple); transform: translateY(-5px); }
+    .price { font-size: 2.5rem; font-weight: 800; margin: 15px 0; font-family: 'Outfit'; }
+    .price span { font-size: 0.9rem; color: var(--text-dim); }
+    
+    .tab-btn {
+      background: var(--glass); border: 1px solid var(--glass-border);
+      color: var(--text); padding: 12px 25px; border-radius: 100px;
+      cursor: pointer; font-weight: 700; transition: 0.3s;
+      display: flex; align-items: center; gap: 10px; font-size: 1rem;
+    }
+    .tab-btn.active { background: var(--purple); border-color: var(--purple); }
+    .tab-logo { width: 25px; height: 25px; border-radius: 5px; }
+
+    /* --- STREAMING (FIX MOBILE) --- */
+    .streaming-section { padding: 40px 0; }
+    .poster-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 15px; }
+    @media (max-width: 480px) { .poster-grid { grid-template-columns: repeat(2, 1fr); } }
+    .poster-card { position: relative; aspect-ratio: 2/3; border-radius: 10px; overflow: hidden; border: 1px solid var(--glass-border); transition: 0.4s; }
+    .poster-card img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* --- FAQ --- */
+    .faq-area { padding: 60px 0; }
+    .faq-container { max-width: 800px; margin: 0 auto; }
+    .faq-item { background: var(--glass); border: 1px solid var(--glass-border); border-radius: 15px; margin-bottom: 10px; overflow: hidden; }
+    .faq-question { padding: 20px; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-weight: 700; transition: 0.3s; }
+    .faq-answer { padding: 0 20px; max-height: 0; overflow: hidden; transition: 0.3s ease-out; color: var(--text-dim); line-height: 1.6; }
+    .faq-item.active .faq-answer { padding: 0 20px 20px; max-height: 500px; }
+
+    /* --- WHATSAPP & NOTIFICAÇÃO --- */
+    #waBubble {
+        position: fixed; top: 20px; left: 20px; z-index: 2001;
+        background: #25d366; color: white; padding: 10px 18px;
+        border-radius: 15px; font-size: 13px; font-weight: 700;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.4); display: none; align-items: center; gap: 8px;
+        animation: slideDown 0.5s ease;
+    }
+    @keyframes slideDown { from { transform: translateY(-50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+    .wa-float-container { 
+      position: fixed; bottom: 25px; right: 20px; z-index: 2000; 
+      display: flex; align-items: center; gap: 10px; text-decoration: none;
+    }
+    .wa-text-box { 
+      background: #25d366; color: white; padding: 12px 20px; 
+      border-radius: 30px 30px 0 30px; font-weight: 800; font-size: 13px; 
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3); white-space: nowrap;
+    }
+    .wa-btn { width: 60px; height: 60px; background: #25d366; border-radius: 50%; display: grid; place-items: center; box-shadow: 0 10px 25px rgba(37,211,102,0.4); }
+
+    /* --- FOOTER --- */
+    .footer { background: var(--bg-darker); border-top: 1px solid var(--glass-border); padding: 60px 0 30px; margin-top: 40px; }
+    .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer-col h4 { color: #fff; margin-bottom: 20px; text-transform: uppercase; font-size: 14px; letter-spacing: 1px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 12px; }
+    .footer-links a { color: var(--text-dim); text-decoration: none; font-size: 14px; transition: 0.2s; }
+    .footer-links a:hover { color: var(--purple); }
+    .pay-badge { background: var(--glass); padding: 6px 12px; border-radius: 6px; font-size: 11px; font-weight: 800; border: 1px solid var(--glass-border); color: var(--text-dim); margin: 0 5px 5px 0; display: inline-block; }
+
+    .btn { padding: 15px 30px; border-radius: 12px; font-weight: 800; text-transform: uppercase; cursor: pointer; transition: 0.3s; border: none; display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-size: 14px; }
+    .btn-purple { background: var(--purple); color: #fff; box-shadow: 0 8px 20px var(--purple-glow); }
+    
+    @media (max-width: 768px) { 
+      .footer-grid { grid-template-columns: 1fr; text-align: center; } 
+      .nav .btn-purple { display: none; }
+      .wa-text-box { font-size: 11px; padding: 10px 15px; }
+    }
+  </style>
+<link id="vyn-anim" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><style id="vyn-color-inject">:root{--gold:#111111 !important;--accent:#111111 !important;--cor-botoes:#d4af37 !important;--red:#111111 !important;--purple:#111111 !important;--p:#111111 !important;}</style>
+</head>
+
+<body class="">
+  <div class="bg-web"></div>
+
+  <div id="waBubble">
+    <span style="background:white; color:#25d366; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px;">✔</span>
+    <span id="waText">Viviane acabou de assinar!</span>
+  </div>
+
+  <header class="header">
+    <div class="container nav">
+      <a href="#" class="logo-container">
+        <img src="assets/logo.jpeg" alt="Logo" class="logo-img">
+        <div class="logo-text"><span>Pp</span>PlayerTV</div>
+      </a>
+      <a href="https://api.whatsapp.com/send?phone=5511999999999" class="btn btn-purple">CONVERSAR COM SUPORTE</a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="background-color: rgb(102, 173, 16) !important;">
+      <div class="container">
+        <h1 class="reveal active">DOMINEM<br>SEUS MERCADOS</h1>
+        <p>Descubra a melhor grade de conteúdo diário no Meu Site, disponível em qualquer dispositivo!</p>
+        
+        <div class="premium-info container">
+            <div class="info-card"><h4>+1.300</h4><p>Assista aos canais Ao Vivo no Meu Site e sinta o impacto imediato!</p></div>
+            <div class="info-card"><h4>+20 Mil</h4><p>Sinta o prazer de assistir os melhores Filmes e Séries no Meu Site, sem comprometer!</p></div>
+            <div class="info-card"><h4>Suporte 24h</h4><p>No Meu Site, a experiência de streaming é personalizada e humanizada, para você!</p></div>
+            <div class="info-card"><h4>Zero Trava</h4><p>Servidores Premium</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="plans-area container" id="planos">
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">Encontre o seu plano perfeito no Meu Site e aproveite a melhor experiência de streaming!</h2>
+        
+        <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
+          <button onclick="showTab('uniplay')" id="btn-uniplay" class="tab-btn active">
+             <img src="assets/2.jpeg" alt="" class="tab-logo"> PLANOS UNIPLAY
+          </button>
+          <button onclick="showTab('unitv')" id="btn-unitv" class="tab-btn">
+             <img src="assets/1.jpeg" alt="" class="tab-logo"> PLANOS UNITV
+          </button>
+        </div>
+
+        <div id="tab-uniplay" class="plans-grid active">
+          <div class="plan-card">
+            <div style="color:var(--accent); font-weight:800; font-size: 12px;">MENSAL</div>
+            <div class="price">R$ 24<span>,99</span></div>
+            <button onclick="assinar('Uniplay Mensal')" class="btn btn-purple">ASSINAR AGORA</button>
+          </div>
+          <div class="plan-card">
+            <div style="color:var(--accent); font-weight:800; font-size: 12px;">TRIMESTRAL</div>
+            <div class="price">R$ 65<span>,00</span></div>
+            <button onclick="assinar('Uniplay Trimestral')" class="btn btn-purple">ASSINAR AGORA</button>
+          </div>
+          <div class="plan-card">
+            <div style="color:var(--accent); font-weight:800; font-size: 12px;">SEMESTRAL</div>
+            <div class="price">R$ 120<span>,00</span></div>
+            <button onclick="assinar('Uniplay Semestral')" class="btn btn-purple">ASSINAR AGORA</button>
+          </div>
+          <div class="plan-card" style="border-color: var(--accent);">
+            <div style="color:var(--accent); font-weight:800; font-size: 12px;">ANUAL</div>
+            <div class="price">R$ 220<span>,00</span></div>
+            <button onclick="assinar('Uniplay Anual')" class="btn" style="background:var(--accent); color:#000;">ASSINAR AGORA</button>
+          </div>
+        </div>
+
+        <div id="tab-unitv" class="plans-grid">
+          <div class="plan-card">
+            <div style="color:var(--purple); font-weight:800; font-size: 12px;">MENSAL</div>
+            <div class="price">R$ 27<span>,99</span></div>
+            <button onclick="assinar('Unitv Mensal')" class="btn btn-purple">ASSINAR AGORA</button>
+          </div>
+          <div class="plan-card">
+            <div style="color:var(--purple); font-weight:800; font-size: 12px;">SEMESTRAL</div>
+            <div class="price">R$ 140<span>,00</span></div>
+            <button onclick="assinar('Unitv Semestral')" class="btn btn-purple">ASSINAR AGORA</button>
+          </div>
+          <div class="plan-card" style="border-color: var(--purple);">
+            <div style="color:var(--purple); font-weight:800; font-size: 12px;">ANUAL</div>
+            <div class="price">R$ 240<span>,00</span></div>
+            <button onclick="assinar('Unitv Anual')" class="btn btn-purple">ASSINAR AGORA</button>
+          </div>
+        </div>
+    </section>
+
+    <section class="streaming-section container">
+      <div class="streaming-tabs">
+        <button class="tab-btn active" id="btnContentMovie" onclick="loadContent('movie')">Filmes</button>
+        <button class="tab-btn" id="btnContentTv" onclick="loadContent('tv')">Séries</button>
+      </div>
+      <div class="poster-grid" id="contentGrid" style="opacity: 1;"><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/48h40o6Q97hZaqH0g7bOiXOrImX.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/bOzG3SG6gBxHGGHYiq7xXeNb1bG.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/v0Ljeti537c6cNKweuEN0iaU3x4.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/v8sjoZynhlyAT4pYdTI8m7FFHq9.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/a1a2JYoBTchMy1stqpSHxS5MMle.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/ybXcKzJr0nuRZaLB74ujITNPNeH.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/njatIGrIlZCxB88UUBC2xgmfCNE.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/ftPFJBGbldoWiiPrmesW96zBzdH.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/oLWBW1Sg9V8KGgbR3Y8jeEWF2Gi.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/oz4Mt34HH8f6LgWYFscYf56PToT.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/t1DQ4XXIqTm5LvUjz8jypN43JjZ.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/hHnEDdzdmK8ZyTfkvWz2BI64YXY.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/5r2PW4Wztcm8FJmKNWDORwoYju1.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/762vOiAWzosAH95sKLzUqYaAoHR.jpg"></div></div>
+    </section>
+
+    <section class="faq-area container" id="faq">
+      <h2 style="text-align:center; margin-bottom:40px;">DÚVIDAS <span style="color:var(--purple)">FREQUENTES</span></h2>
+      <div class="faq-container">
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">Como recebo meu acesso após o pagamento? <span>▼</span></div>
+          <div class="faq-answer">O envio é imediato! Assim que confirmar o pagamento via PIX, enviamos os dados de login e o tutorial passo a passo direto no seu WhatsApp.</div>
+        </div>
+        <div class="faq-item">
+          <div class="faq-question" onclick="toggleFaq(this)">Preciso de antena ou cabos? <span>▼</span></div>
+          <div class="faq-answer">Não! Nosso sistema funciona 100% via internet. Você só precisa de uma Smart TV, TV Box ou celular conectado para assistir.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Quais dispositivos são compatíveis? <span>▼</span></div>
+            <div class="faq-answer">Smart TVs (Samsung, LG, Android), TV Box, Fire Stick, Celulares (Android/iOS), Tablets e Computadores.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question" onclick="toggleFaq(this)">Quais canais vou ter acesso? <span>▼</span></div>
+            <div class="faq-answer">Todos! Grade completa com Esportes (Premiere, ESPN, DAZN), Filmes (HBO, Telecine), Infantis, Documentários e canais abertos.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="container" style="text-align: center; padding: 60px 0;">
+        <h2 style="margin-bottom: 20px;">Está com dúvida sobre o Meu Site? Nossa equipe está aqui para ajudar!</h2>
+        <p style="color: var(--text-dim); margin-bottom: 30px;">Fale agora com um especialista e peça seu teste gratuito de 2 horas.</p>
+        <a href="https://api.whatsapp.com/send?phone=5511999999999" class="btn btn-purple" style="padding: 20px 40px;">SOLICITAR MEU TESTE GRÁTIS</a>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <div class="logo-text" style="margin-bottom: 15px;"><span>Pp</span>PlayerTV</div>
+          <p>Líder em entretenimento digital. Estabilidade, suporte humanizado e o maior catálogo do Brasil.</p>
+          <div class="pay-methods">
+            <span class="pay-badge">PIX</span><span class="pay-badge">CARTÃO</span><span class="pay-badge">SSL SEGURO</span>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navegação</h4>
+          <ul class="footer-links">
+            <li><a href="#planos">Nossos Planos</a></li>
+            <li><a href="#faq">Perguntas Frequentes</a></li>
+            <li><a href="https://api.whatsapp.com/send?phone=5511999999999">Solicitar Teste</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Suporte</h4>
+          <p style="margin-bottom: 15px; font-size: 14px;">Atendimento prioritário via WhatsApp.</p>
+          <a href="https://api.whatsapp.com/send?phone=5511999999999" class="btn btn-purple" style="padding:10px 20px; font-size:12px;">Falar com Atendente</a>
+        </div>
+      </div>
+      <div style="text-align: center; padding-top: 30px; border-top: 1px solid var(--glass-border); color: #444; font-size: 12px;">
+        © 2026 PpPlayerTV. Todos os direitos reservados.
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://api.whatsapp.com/send?phone=5511999999999?text=Olá! Quero falar com um atendente." class="wa-float-container" target="_blank">
+      <div class="wa-text-box">FALAR COM ATENDENTE</div>
+      <div class="wa-btn">
+        <svg width="35" height="35" fill="#fff" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.417-.003 6.557-5.338 11.892-11.893 11.892-1.997-.001-3.951-.499-5.688-1.447l-6.305 1.65zm6.59-3.407c1.558.925 3.31 1.414 5.099 1.415 5.317 0 9.645-4.328 9.648-9.647.001-2.577-1.003-4.999-2.827-6.824-1.825-1.826-4.247-2.828-6.824-2.828-5.318 0-9.646 4.328-9.648 9.647 0 1.891.493 3.739 1.427 5.376l-.93 3.396 3.475-.912zm9.932-6.581c-.273-.136-1.613-.797-1.863-.888-.25-.091-.432-.136-.613.136-.182.273-.705.888-.864 1.069-.159.181-.318.204-.591.068-.273-.136-1.152-.425-2.193-1.355-.808-.72-1.352-1.611-1.511-1.884-.159-.273-.017-.42.12-.558.122-.123.273-.318.409-.477.136-.159.181-.272.272-.454.091-.181.046-.34-.023-.477-.068-.136-.613-1.477-.84-2.022-.222-.534-.447-.461-.613-.469l-.523-.006c-.182 0-.477.068-.727.341-.25.273-1.023.954-1.023 2.318s1.023 2.682 1.159 2.863c.136.182 2.013 3.074 4.877 4.31.682.296 1.215.474 1.626.604.685.218 1.309.187 1.802.114.549-.081 1.613-.659 1.841-1.295s.227-1.182.159-1.295c-.069-.114-.25-.181-.523-.317z"></path></svg>
+      </div>
+  </a>
+
+  <script>
+    const TMDB_KEY = "9049a1d821f51ef88e70e430d10298c5";
+
+    async function loadContent(type) {
+      const grid = document.getElementById('contentGrid');
+      const btnMovie = document.getElementById('btnContentMovie');
+      const btnTv = document.getElementById('btnContentTv');
+      
+      grid.style.opacity = '0.3';
+      try {
+        const res = await fetch(`https://api.themoviedb.org/3/trending/${type}/week?api_key=${TMDB_KEY}&language=pt-BR`);
+        const data = await res.json();
+        grid.innerHTML = data.results.slice(0, 14).map(item => `<div class="poster-card"><img src="https://image.tmdb.org/t/p/w500${item.poster_path}"></div>`).join('');
+        grid.style.opacity = '1';
+        
+        // Fix for mobile button active states
+        if(type === 'movie') {
+            btnMovie.classList.add('active');
+            btnTv.classList.remove('active');
+        } else {
+            btnTv.classList.add('active');
+            btnMovie.classList.remove('active');
+        }
+      } catch (e) { console.error(e); }
+    }
+
+    function toggleFaq(el) { el.parentElement.classList.toggle('active'); }
+
+    function showTab(plataforma) {
+      document.getElementById('tab-uniplay').style.display = 'none';
+      document.getElementById('tab-unitv').style.display = 'none';
+      document.getElementById('tab-' + plataforma).style.display = 'grid';
+      document.getElementById('btn-uniplay').classList.toggle('active', plataforma === 'uniplay');
+      document.getElementById('btn-unitv').classList.toggle('active', plataforma === 'unitv');
+    }
+
+    function assinar(plano) {
+      const msg = encodeURIComponent(`Olá, vim pelo site e quero assinar o plano ${plano}!`);
+      window.open(`https://wa.me/5521990754537?text=${msg}`, '_blank');
+    }
+
+    const names = ["Ricardo", "Amanda", "Viviane", "Marcos", "Fernanda", "Gabriel", "Juliana"];
+    const bubble = document.getElementById('waBubble');
+    const waText = document.getElementById('waText');
+
+    setInterval(() => {
+        const name = names[Math.floor(Math.random() * names.length)];
+        waText.innerText = `${name} acabou de assinar!`;
+        bubble.style.display = 'flex';
+        setTimeout(() => bubble.style.display = 'none', 5000);
+    }, 15000);
+
+    window.onload = () => loadContent('movie');
+  </script>
+
+<script id="vyn-bs" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script><script id="vyn-live-script">
+
+            document.addEventListener("DOMContentLoaded", () => {
+
+                if(document.body.classList.contains('is-editor')) return;
+
+                
+
+                // 1. Observer de Animação
+
+                const obs = new IntersectionObserver((entries) => {
+
+                    entries.forEach(e => {
+
+                        if(e.isIntersecting) {
+
+                            const animClass = e.target.getAttribute('data-anim-class');
+
+                            if(animClass) {
+
+                                e.target.classList.add('animate__animated', animClass);
+
+                                e.target.style.visibility = 'visible';
+
+                            }
+
+                            obs.unobserve(e.target);
+
+                        }
+
+                    });
+
+                });
+
+
+
+                document.querySelectorAll('.animate__animated').forEach(el => {
+
+                    const animClass = Array.from(el.classList).find(c => c.startsWith('animate__') && c !== 'animate__animated');
+
+                    if(animClass) {
+
+                        el.setAttribute('data-anim-class', animClass);
+
+                        el.classList.remove('animate__animated', animClass);
+
+                        el.style.visibility = 'hidden';
+
+                        obs.observe(el);
+
+                    }
+
+                });
+
+
+
+                // 2. Fallback para links alternativos
+
+                document.querySelectorAll('[data-href]').forEach(el => {
+
+                    el.addEventListener('click', function(e) {
+
+                        e.preventDefault();
+
+                        const url = this.getAttribute('data-href');
+
+                        if(url.includes('http') || url.includes('whatsapp')) window.open(url, '_blank');
+
+                        else window.location.href = url;
+
+                    });
+
+                });
+
+            });
+
+        </script></body></html>
