@@ -152,13 +152,14 @@
       .wa-text-box { font-size: 11px; padding: 10px 15px; }
     }
   </style>
-<link id="vyn-anim" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"><style id="vyn-color-inject">:root{--gold:#111111 !important;--accent:#111111 !important;--cor-botoes:#d4af37 !important;--red:#111111 !important;--purple:#111111 !important;--p:#111111 !important;}</style>
+<link id="vyn-anim" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+<style id="vyn-color-inject">:root{--gold:#111111 !important;--accent:#111111 !important;--cor-botoes:#d4af37 !important;--red:#111111 !important;--purple:#111111 !important;--p:#111111 !important;}</style>
 </head>
 
 <body class="">
   <div class="bg-web"></div>
 
-  <div id="waBubble">
+  <div id="waBubble" style="display: none;">
     <span style="background:white; color:#25d366; border-radius:50%; width:18px; height:18px; display:flex; align-items:center; justify-content:center; font-size:10px;">✔</span>
     <span id="waText">Viviane acabou de assinar!</span>
   </div>
@@ -173,7 +174,7 @@
     </div>
   </header>
 
-  <main>
+  <main class="" style="background-color: rgb(143, 177, 22) !important;">
     <section class="hero" style="background-color: rgb(102, 173, 16) !important;">
       <div class="container">
         <h1 class="reveal active">DOMINEM<br>SEUS MERCADOS</h1>
@@ -181,7 +182,7 @@
         
         <div class="premium-info container">
             <div class="info-card"><h4>+1.300</h4><p>Assista aos canais Ao Vivo no Meu Site e sinta o impacto imediato!</p></div>
-            <div class="info-card"><h4>+20 Mil</h4><p>Sinta o prazer de assistir os melhores Filmes e Séries no Meu Site, sem comprometer!</p></div>
+            <div class="info-card"><h4>+20 Mil</h4><p class="">Assista a Milhões de Filmes e Séries Agora!</p></div>
             <div class="info-card"><h4>Suporte 24h</h4><p>No Meu Site, a experiência de streaming é personalizada e humanizada, para você!</p></div>
             <div class="info-card"><h4>Zero Trava</h4><p>Servidores Premium</p></div>
         </div>
@@ -189,7 +190,7 @@
     </section>
 
     <section class="plans-area container" id="planos">
-        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;">Encontre o seu plano perfeito no Meu Site e aproveite a melhor experiência de streaming!</h2>
+        <h2 style="text-align: center; font-size: 2.2rem; margin-bottom: 40px;" class="">Descubra planos exclusivos no Meu Site</h2>
         
         <div style="display: flex; justify-content: center; gap: 15px; margin-bottom: 40px; flex-wrap: wrap;">
           <button onclick="showTab('uniplay')" id="btn-uniplay" class="tab-btn active">
@@ -247,7 +248,7 @@
         <button class="tab-btn active" id="btnContentMovie" onclick="loadContent('movie')">Filmes</button>
         <button class="tab-btn" id="btnContentTv" onclick="loadContent('tv')">Séries</button>
       </div>
-      <div class="poster-grid" id="contentGrid" style="opacity: 1;"><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/48h40o6Q97hZaqH0g7bOiXOrImX.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/bOzG3SG6gBxHGGHYiq7xXeNb1bG.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/v0Ljeti537c6cNKweuEN0iaU3x4.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/v8sjoZynhlyAT4pYdTI8m7FFHq9.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/a1a2JYoBTchMy1stqpSHxS5MMle.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/ybXcKzJr0nuRZaLB74ujITNPNeH.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/njatIGrIlZCxB88UUBC2xgmfCNE.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/ftPFJBGbldoWiiPrmesW96zBzdH.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/oLWBW1Sg9V8KGgbR3Y8jeEWF2Gi.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/oz4Mt34HH8f6LgWYFscYf56PToT.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/t1DQ4XXIqTm5LvUjz8jypN43JjZ.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/hHnEDdzdmK8ZyTfkvWz2BI64YXY.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/5r2PW4Wztcm8FJmKNWDORwoYju1.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/762vOiAWzosAH95sKLzUqYaAoHR.jpg"></div></div>
+      <div class="poster-grid" id="contentGrid" style="opacity: 1;"><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/48h40o6Q97hZaqH0g7bOiXOrImX.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/bOzG3SG6gBxHGGHYiq7xXeNb1bG.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/v0Ljeti537c6cNKweuEN0iaU3x4.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/v8sjoZynhlyAT4pYdTI8m7FFHq9.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/a1a2JYoBTchMy1stqpSHxS5MMle.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/ybXcKzJr0nuRZaLB74ujITNPNeH.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/njatIGrIlZCxB88UUBC2xgmfCNE.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/ftPFJBGbldoWiiPrmesW96zBzdH.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/oLWBW1Sg9V8KGgbR3Y8jeEWF2Gi.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/oz4Mt34HH8f6LgWYFscYf56PToT.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/t1DQ4XXIqTm5LvUjz8jypN43JjZ.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/5r2PW4Wztcm8FJmKNWDORwoYju1.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/hHnEDdzdmK8ZyTfkvWz2BI64YXY.jpg"></div><div class="poster-card"><img src="https://image.tmdb.org/t/p/w500/762vOiAWzosAH95sKLzUqYaAoHR.jpg"></div></div>
     </section>
 
     <section class="faq-area container" id="faq">
@@ -279,35 +280,7 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <div class="logo-text" style="margin-bottom: 15px;"><span>Pp</span>PlayerTV</div>
-          <p>Líder em entretenimento digital. Estabilidade, suporte humanizado e o maior catálogo do Brasil.</p>
-          <div class="pay-methods">
-            <span class="pay-badge">PIX</span><span class="pay-badge">CARTÃO</span><span class="pay-badge">SSL SEGURO</span>
-          </div>
-        </div>
-        <div class="footer-col">
-          <h4>Navegação</h4>
-          <ul class="footer-links">
-            <li><a href="#planos">Nossos Planos</a></li>
-            <li><a href="#faq">Perguntas Frequentes</a></li>
-            <li><a href="https://api.whatsapp.com/send?phone=5511999999999">Solicitar Teste</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Suporte</h4>
-          <p style="margin-bottom: 15px; font-size: 14px;">Atendimento prioritário via WhatsApp.</p>
-          <a href="https://api.whatsapp.com/send?phone=5511999999999" class="btn btn-purple" style="padding:10px 20px; font-size:12px;">Falar com Atendente</a>
-        </div>
-      </div>
-      <div style="text-align: center; padding-top: 30px; border-top: 1px solid var(--glass-border); color: #444; font-size: 12px;">
-        © 2026 PpPlayerTV. Todos os direitos reservados.
-      </div>
-    </div>
-  </footer>
+  
 
   <a href="https://api.whatsapp.com/send?phone=5511999999999?text=Olá! Quero falar com um atendente." class="wa-float-container" target="_blank">
       <div class="wa-text-box">FALAR COM ATENDENTE</div>
